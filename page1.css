@@ -1,0 +1,422 @@
+@keyframes anim {
+  0% {
+    transform: translatey(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  gap: 20%;
+  margin: 30px;
+}
+header .arrow {
+  display: flex;
+  margin-top: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+header i {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+header img {
+  width: 150px;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.background img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 40px;
+  top: 180px;
+}
+.page .fa-heart {
+  cursor: pointer;
+  position: absolute;
+}
+.page .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.page .fa-solid:hover {
+  opacity: 1;
+  animation: heart 700ms;
+}
+.page .fa-sharp {
+  opacity: 1;
+  color: white;
+  font-size: 40px;
+}
+.page .haut {
+  display: flex;
+  justify-content: space-between;
+}
+.page .cartes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.page p {
+  margin-right: 80px;
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+  font-style: oblique;
+  font-weight: 900;
+}
+.page i {
+  font-size: 30px;
+  margin-top: 6px;
+}
+.page h1 {
+  font-size: 12px;
+  font-weight: 100;
+  margin-top: 30px;
+}
+.page h2 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.page h4 {
+  font-weight: 300;
+  font-size: 13px;
+}
+.page .V1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  padding: 0px 0px 0px 30px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  animation: anim 2s;
+  cursor: pointer;
+  overflow: hidden;
+  gap: 20px;
+}
+.page .V1:hover .check {
+  margin: 0px;
+  transition: 1s;
+}
+.page .V1:hover .fa-sharp {
+  animation-name: spin;
+  animation-duration: 900ms;
+  animation-timing-function: linear;
+}
+.page .vtexte {
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.page .droite {
+  display: flex;
+  margin-right: -1px;
+}
+.page .barre-verte {
+  display: flex;
+  font-size: 20px;
+  border-bottom: 3px solid #99E2D0;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  width: 28px;
+}
+.page strong {
+  display: flex;
+  align-items: center;
+  padding: 25px 20px 25px 0px;
+}
+.page .check {
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 0 20px 20px 0px;
+  margin-right: -70px;
+}
+
+.bouton {
+  display: flex;
+  justify-content: center;
+}
+.bouton button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
+  border-radius: 55px;
+  padding: 15px 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border: none;
+  font-weight: 550;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.bouton button:hover {
+  opacity: 1;
+  transition: 700ms;
+  transform: scale(1.03);
+  background: linear-gradient(rgba(255, 121, 217, 0.7215686275), rgba(146, 86, 220, 0.7568627451));
+  color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4235294118);
+}
+
+footer {
+  background-color: #363636;
+  color: white;
+  position: relative;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+footer svg {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+footer .txt-ft {
+  margin-left: 30px;
+}
+footer p {
+  padding: 5px;
+}
+footer p:hover {
+  color: #FF79DA;
+}
+footer i {
+  margin-right: 10px;
+}
+footer .fa-utensils {
+  margin-right: 15px;
+}
+
+@media (min-width: 378px) {
+  header img {
+    width: 200px;
+  }
+  .page h1 {
+    font-size: 16px;
+  }
+  .page h2, .page h4 {
+    font-size: 16px;
+  }
+  .page .vignette {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+@media (min-width: 378px) {
+  header {
+    gap: 25%;
+  }
+  footer {
+    font-size: 20px;
+  }
+  .page h2, .page h4 {
+    font-size: 10px;
+  }
+}
+@media (min-width: 400px) {
+  .page h2, .page h4 {
+    font-size: 17px;
+  }
+  .page .vtexte {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+}
+@media (min-width: 500px) {
+  header {
+    gap: 25%;
+  }
+  .page {
+    top: 300px;
+    margin-bottom: 100px;
+    padding: 50px;
+  }
+  .page p {
+    font-size: 40px;
+  }
+  strong {
+    font-size: 20px;
+  }
+}
+@media (min-width: 800px) {
+  .page .check {
+    background-color: #99E2D0;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 0 20px 20px 0px;
+    margin-right: -100px;
+  }
+  .page .V1 {
+    justify-content: space-between;
+  }
+  .page h1 {
+    font-size: 30px;
+  }
+  .page h2, .page h4, .page .V1 {
+    font-size: 25px;
+  }
+  header {
+    gap: 35%;
+  }
+  header img {
+    width: 300px;
+  }
+  header i {
+    font-size: 40px;
+  }
+  .page {
+    margin-bottom: 250px;
+    top: 400px;
+    padding: 20px 80px;
+  }
+  .page p {
+    font-size: 60px;
+  }
+  .page i {
+    font-size: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .page strong {
+    font-size: 13px;
+  }
+  .page .check {
+    background-color: #99E2D0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 0 20px 20px 0px;
+    margin-right: -70px;
+  }
+  .page .vignette {
+    width: 100%;
+  }
+  .page .cartes {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-around;
+    justify-content: center;
+    width: 100%;
+  }
+  .page .groupe {
+    height: 100%;
+  }
+  .page .V1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    width: 100%;
+    flex-wrap: nowrap;
+    max-width: 300px;
+  }
+  .page .vtexte h2,
+.page .vtexte h4 {
+    font-size: 12px;
+  }
+  .page .vtexte {
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1100px) {
+  .page .cartes {
+    gap: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .page {
+    top: 450px;
+    padding: 20px 100px;
+  }
+  .page .cartes {
+    justify-content: space-around;
+  }
+  .page .V1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .page .vtexte h2,
+.page .vtexte h4 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1350px) {
+  .page .V1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+}
+
+/*# sourceMappingURL=page1.css.map */
