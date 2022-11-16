@@ -29,7 +29,7 @@ body {
   place-items: center;
   position: fixed;
   background-color: #363636;
-  height: 800px;
+  height: 100%;
   inset: 0;
   z-index: 5;
   opacity: 0.9;
