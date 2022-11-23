@@ -135,7 +135,10 @@ header img {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  padding: 10px;
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
   font-size: 100%;
 }
 .vignette li {
@@ -176,12 +179,17 @@ header img {
   color: green;
   border-radius: 5px;
 }
+.Back a {
+  text-decoration: none;
+  color: black;
+}
 .Back .cartes {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .Back .carte {
   position: relative;
@@ -286,8 +294,8 @@ footer .fa-utensils {
   }
   .vignette .chiffres {
     padding-right: 440px;
-    padding-bottom: 90px;
-    gap: 95px;
+    padding-bottom: 10px;
+    gap: 75px;
   }
   .vignette p {
     padding: 20px;

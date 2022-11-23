@@ -156,17 +156,23 @@ header{
     h2{
         font-size: 12px;
         margin-bottom: 5px;
+        text-overflow : ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     h4{
         font-weight: 300;
         font-size: 13px;
+        text-overflow : ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
 
     .V1{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-direction: row;
         background-color: white;
@@ -200,6 +206,15 @@ header{
 
     }
 
+    .V2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
     .vtexte{
         
         display: flex;
@@ -231,7 +246,6 @@ header{
     strong{
         display: flex;
         align-items: center;
-        padding: 25px 20px 25px 0px;
     
     }
 
@@ -445,10 +459,15 @@ footer{
         background-color: #99E2D0;
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
         border-radius: 0 20px 20px 0px;
         margin-right: -70px;
 
+    }
+    .page .fa-sharp{
+        opacity: 1;
+        color: white;
+        font-size: 30px;
     }
 
     .page .vignette{
@@ -457,7 +476,7 @@ footer{
     .page .cartes{
         display: flex;
         flex-direction: row;
-        gap: 50px;
+        gap: 80px;
         justify-content: space-around; 
         justify-content: center;
         width: 100%;
@@ -465,6 +484,8 @@ footer{
 
     .page .groupe{
         height: 100%;
+        width: 100%;
+        max-width: 236px;
         
     }
  
@@ -472,14 +493,16 @@ footer{
         display: flex;
         flex-direction: row;
         font-size: 17px;
-        width: 100%;
+        width: 150%;
         flex-wrap: nowrap;
-        max-width: 300px;
+        max-width: 249px;
     }
+
+    
 
     .page .vtexte h2,
     .page .vtexte h4{
-        font-size: 12px;
+        font-size: 11px;
     }
     .page .vtexte {
         display: flex;
@@ -487,19 +510,41 @@ footer{
             text-overflow : ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            padding: 0;
         
     }
     
   }
+  @media (min-width:  1000px) {
+    .page .V1{
+        gap: 5px;
+    }
+    .bouton button{
+        margin-left: 55px;
+    }
+    .page .check{
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-radius: 0 20px 20px 0px;
+        margin-right: -60px;
+        
 
-  @media (min-width:  1100px) {
-    
-    .page .cartes{
-        gap: 40px; 
-        
+    }
+    .page .fa-sharp{
+        opacity: 1;
+        color: white;
+        font-size: 30px;
     }
   }
+ 
   @media (min-width:  1200px) {
+    
+
+    .bouton button{
+        margin-left: 50px;
+    }
     .page{
         top:450px;
         padding: 20px 100px;
@@ -507,20 +552,34 @@ footer{
 
     .page .cartes{
         justify-content: space-around; 
-        
     }
 
     .page .V1{
         display: flex;
         flex-direction: row;
         font-size: 20px;
-        width: 100%;
         flex-wrap: nowrap;
+        gap: 7px;
+        
+    }
+    .page .check{
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0 20px 20px 0px;
+        margin-right: -70px;
+
+    }
+    .page .fa-sharp{
+        opacity: 1;
+        color: white;
+        font-size: 30px;
     }
 
     .page .vtexte h2,
     .page .vtexte h4{
-        font-size: 18px;
+        font-size: 11px;
     }
   }
 
@@ -530,8 +589,22 @@ footer{
         flex-direction: row;
         font-size: 20px;
         width: 100%;
-        gap: 40px;
+        gap: 15px;
         flex-wrap: nowrap;
         
+    }
+    .page .check{
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 0 20px 20px 0px;
+        margin-right: -70px;
+
+    }
+    .page .fa-sharp{
+        opacity: 1;
+        color: white;
+        font-size: 30px;
     }
   }
