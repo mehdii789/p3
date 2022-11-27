@@ -105,7 +105,6 @@ header img {
 
 .vignette {
   font-size: 100%;
-  margin-bottom: 50px;
 }
 .vignette ul {
   gap: 20px;
@@ -125,27 +124,36 @@ header img {
   display: flex;
   justify-content: center;
 }
+.vignette ul {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 .vignette .chiffres {
   position: absolute;
   z-index: 1;
-  gap: 48px;
-  padding-right: 250px;
+  margin-left: -40px;
+  margin-top: -5px;
 }
 .vignette p {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
-  height: 35px;
-  width: 35px;
+  height: 23px;
+  width: 23px;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 100%;
 }
 .vignette li {
+  width: 150px;
   padding: 25px 50px;
   background-color: #fafafa;
   border-radius: 20px;
   font-weight: 550;
+  font-size: 11px;
   list-style: none;
   display: flex;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
@@ -291,24 +299,34 @@ footer .fa-utensils {
   .vignette li {
     font-size: 20px;
     padding: 50px 110px;
+    width: 280px;
   }
   .vignette .chiffres {
-    padding-right: 440px;
-    padding-bottom: 10px;
-    gap: 75px;
+    margin-left: -90px;
   }
   .vignette p {
-    padding: 20px;
+    width: 35px;
+    height: 35px;
     font-size: 20px;
   }
   .vignette .txt {
     justify-content: space-around;
+  }
+  .txt ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .txt li {
+    font-size: 20px;
   }
 }
 @media (min-width: 713px) {
   .haut-de-page h1 {
     font-size: 35px;
     font-weight: 750;
+  }
+  .page .titre1 {
+    padding: 0;
   }
   .localisation {
     font-size: 25px;
@@ -329,6 +347,10 @@ footer .fa-utensils {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .txt ul {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 992px) {
@@ -366,6 +388,21 @@ footer .fa-utensils {
   }
   .vignette .txt {
     flex-direction: row;
+  }
+  .txt ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .txt li {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .txt ul {
+    gap: 100px;
+  }
+  .txt li {
+    align-items: center;
   }
 }
 
