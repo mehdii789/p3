@@ -63,6 +63,7 @@ header img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  height: 1000px;
 }
 
 .page {
@@ -74,7 +75,7 @@ header img {
   padding: 40px;
   background-color: white;
   z-index: 1;
-  border-radius: 40px;
+  border-radius: 40px 40px 0px 0px;
   top: 180px;
 }
 .page .fa-heart {
@@ -111,7 +112,6 @@ header img {
   margin-bottom: 25px;
   font-size: 25px;
   font-family: "Shrikhand", cursive;
-  font-style: oblique;
   font-weight: 900;
 }
 .page i {

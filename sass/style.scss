@@ -117,7 +117,7 @@ header{
 
 .titre1{
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     margin-left: 15px;
     font-size: 12px;
   }
@@ -162,7 +162,7 @@ header{
     .chiffres{
         position:absolute;
         z-index:1;
-        margin-left: -40px;
+        margin-left: -60px;
         margin-top: -5px;
         
     }
@@ -182,13 +182,11 @@ header{
     }
 
     li{
-        width: 150px;
-        
+        width: 82%;
         padding: 25px 50px;
         background-color:#fafafa;
         border-radius: 20px;
         font-weight: 550;
-        font-size: 11px;
         list-style: none;
         display: flex;
         box-shadow: 0 0 16px #0000002e;
@@ -206,7 +204,7 @@ header{
     i{
         display: flex;
         margin-right: 10px;
-        
+        justify-content: center;
     }
 
    
@@ -379,12 +377,12 @@ header{
     .vignette li {
         font-size: 20px;
         padding: 50px 110px;
-        width: 280px;
+        width: 60%;
     }
 
     .vignette .chiffres {
         
-        margin-left: -90px;
+        margin-left: -126px;
     }
 
     .vignette p{
